@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qdch.portal.modules.aitext.dao.SouceDataResultDao">
+    
+	<sql id="souceDataResultColumns">
+		a.id AS "id",
+		a.comment AS "comment",
+		a.aspect AS "aspect",
+		a.keypart AS "keypart",
+		a.label AS "label",
+		a.class AS "classe"
+	</sql>
+	
+	<sql id="souceDataResultJoins">
+	</sql>
+    
+	<select id="get" resultType="SouceDataResult">
+		SELECT 
+			<include refid="souceDataResultColumns"/>
+		FROM souce_data_result a
+		<include refid="souceDataResultJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="SouceDataResult">
+		SELECT 
+			<include refid="souceDataResultColumns"/>
+		FROM souce_data_result a
+		<include refid="souceDataResultJoins"/>
+		<where>
+			
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="SouceDataResult">
+		SELECT 
+			<include refid="souceDataResultColumns"/>
+		FROM souce_data_result a
+		<include refid="souceDataResultJoins"/>
+		<where>
+			
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO souce_data_result(
+			id,
+			comment,
+			aspect,
+			keypart,
+			label,
+			class
+		) VALUES (
+			#{id},
+			#{comment},
+			#{aspect},
+			#{keypart},
+			#{label},
+			#{classe}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE souce_data_result SET 	
+			comment = #{comment},
+			aspect = #{aspect},
+			keypart = #{keypart},
+			label = #{label},
+			class = #{classe}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		DELETE FROM souce_data_result
+		WHERE id = #{id}
+	</update>
+	
+</mapper>

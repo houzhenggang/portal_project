@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qdch.portal.modules.aitext.dao.SouceDataDao">
+    
+	<sql id="souceDataColumns">
+		a.id AS "id",
+		a.source AS "source",
+		a.time AS "time",
+		a.area AS "area",
+		a.comment AS "comment",
+		a.emotion AS "emotion",
+		a.extract AS "extract",
+		a.subdivision AS "subdivision"
+	</sql>
+	
+	<sql id="souceDataJoins">
+	</sql>
+    
+	<select id="get" resultType="SouceData">
+		SELECT 
+			<include refid="souceDataColumns"/>
+		FROM souce_data a
+		<include refid="souceDataJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="SouceData">
+		SELECT 
+			<include refid="souceDataColumns"/>
+		FROM souce_data a
+		<include refid="souceDataJoins"/>
+		<where>
+			
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="SouceData">
+		SELECT 
+			<include refid="souceDataColumns"/>
+		FROM souce_data a
+		<include refid="souceDataJoins"/>
+		<where>
+			
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO souce_data(
+			id,
+			source,
+			time,
+			area,
+			comment,
+			emotion,
+			extract,
+			subdivision
+		) VALUES (
+			#{id},
+			#{source},
+			#{time},
+			#{area},
+			#{comment},
+			#{emotion},
+			#{extract},
+			#{subdivision}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE souce_data SET 	
+			source = #{source},
+			time = #{time},
+			area = #{area},
+			comment = #{comment},
+			emotion = #{emotion},
+			extract = #{extract},
+			subdivision = #{subdivision}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		DELETE FROM souce_data
+		WHERE id = #{id}
+	</update>
+	<select id="getResource" resultType="SouceData" parameterType="String">
+	SELECT t1.source as source,count(1) as nums from souce_data t1 
+	INNER JOIN souce_data_result t2 on t2.id=t1.id where t2.aspect=#{aspect}
+	GROUP BY t1.source
+	</select>
+	<select id="getResourceby" resultType="SouceData" parameterType="com.qdch.portal.modules.aitext.entity.SouceData">
+	SELECT t1.source as source,count(1) as nums from souce_data t1 
+    INNER JOIN souce_data_result t2 on t2.id=t1.id where t2.aspect=#{area} and time>=DATE_SUB(NOW(),INTERVAL #{nums} day)
+    GROUP BY t1.source
+	</select>
+	<select id="getResourcebyone" resultType="SouceData" parameterType="String">
+	SELECT t1.source as source,count(1) as nums from souce_data t1 
+    INNER JOIN souce_data_result t2 on t2.id=t1.id where t2.aspect=#{area} and time=NOW()
+    GROUP BY t1.source
+	</select>
+	<select id="getArea" resultType="SouceData" parameterType="String">
+	SELECT t1.area as area,count(1) as nums from souce_data t1 
+	INNER JOIN souce_data_result t2 on t2.id=t1.id where t2.aspect=#{aspect}
+	GROUP BY t1.area
+	</select>
+	<select id="getAreabycon" resultType="SouceData" parameterType="com.qdch.portal.modules.aitext.entity.SouceData">
+	SELECT t1.area as area,count(1) as nums from souce_data t1 
+    INNER JOIN souce_data_result t2 on t2.id=t1.id where t2.aspect=#{area} and time>=DATE_SUB(NOW(),INTERVAL #{nums} day)
+    GROUP BY t1.source
+	</select>
+	<select id="getAreabyone" resultType="SouceData" parameterType="String">
+	SELECT t1.area as area,count(1) as nums from souce_data t1 
+    INNER JOIN souce_data_result t2 on t2.id=t1.id where t2.aspect=#{area} and time=NOW()
+    GROUP BY t1.source
+	</select>
+	<select id="getReSoucreall" resultType="SouceData" parameterType="String">
+	SELECT DATE_FORMAT(t1.time,'%Y%m%d') as date,t1.source as source,count(1) as nums
+    from souce_data t1 INNER JOIN souce_data_result t2 on t2.id=t1.id where t2.aspect=#{aspect}
+    GROUP BY t1.source union ALL select DATE_FORMAT(t3.time,'%Y%m%d') as vday,'全部' as source,
+    count(1) as nums from souce_data t3 INNER JOIN souce_data_result t2 on t2.id=t3.id
+     where t2.aspect=#{aspect}
+
+	</select>
+	<select id="getResourceday" resultType="SouceData" parameterType="String">
+	SELECT DATE_FORMAT(t1.time, '%Y%m%d') AS date,t1.source as source,count(1) as nums from souce_data t1 
+	INNER JOIN souce_data_result t2 on t2.id=t1.id
+    where t2.aspect=#{aspect}
+	where time=NOW() GROUP BY t1.source
+	</select>
+	<select id="getResourcebycon" resultType="SouceData" parameterType="com.qdch.portal.modules.aitext.entity.SouceData">
+	SELECT DATE_FORMAT(t1.time, '%Y%m%d') AS date,t1.source AS source,count(1) AS nums
+    FROM souce_data t1 INNER JOIN souce_data_result t2 on t2.id=t1.id  WHERE
+	time >= DATE_SUB(NOW(), INTERVAL #{nums} DAY) and t2.aspect=#{area} GROUP BY t1.source,
+	DATE_FORMAT(t1.time, '%Y%m%d') UNION ALL SELECT DATE_FORMAT(t3.time, '%Y%m%d') AS vday,
+	'全部' AS source,count(1) AS nums FROM souce_data t3 INNER JOIN souce_data_result t2 on t2.id=t3.id
+    where t2.aspect=#{area}
+	</select>
+
+	<select id="getNews" resultType="SouceData" parameterType="String">
+	select t1.`comment`as comment,t1.source as source,t1.area as area from souce_data  t1  INNER JOIN souce_data_result t2 on t2.id=t1.id
+   where t2.aspect=#{aspect} ORDER BY t1.time 
+	</select>
+	<select id="getResourceByday" resultType="SouceData" parameterType="String">
+	SELECT DATE_FORMAT(time,'%Y%m%d') as vday,count(1) as nums from souce_data t1 
+     where source=#{source} GROUP BY DATE_FORMAT(time,'%Y%m%d')
+	
+	</select>
+</mapper>
