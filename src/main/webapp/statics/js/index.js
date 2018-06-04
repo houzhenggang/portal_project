@@ -126,7 +126,7 @@ function dataTJ(){
 	    dataType: "json",
 	    success: function(data){
 	 
-	    	var name=data[0].source;
+	    	var name=data[0].source+"";
 	    	
 	    	echartsTrend(data,name);
 	    	
@@ -209,6 +209,7 @@ function dataFX(){
 	    data: dataCS,
 	    dataType: "json",
 	    success: function(data){
+	    	
 	    	echartsWater(data);
 	    	onOff1 = true;
 	    }
@@ -221,7 +222,7 @@ function dataFX(){
 	    data: dataCS,
 	    dataType: "json",
 	    success: function(data){
-	    	console.log(data);
+	    	
 	    	echartsRadar(data);
 	    	onOff2 = true;
 	    }
@@ -247,6 +248,7 @@ function dataFX(){
 	    data: dataCS,
 	    dataType: "json",
 	    success: function(data){
+	    	console.log(data);
 	    	echartsPJ(data);
 	    	onOff4 = true;
 	    }

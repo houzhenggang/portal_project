@@ -426,7 +426,17 @@ group by if(class='不相关','无细分标签','有细分标签')
 	<!-- 评价（所有） -->
 	<select id="getEvaluateall" resultType="SouceData"
 		parameterType="String">
-		
+		select
+	(case when label = '0' then '好评'
+		when label = '1' then '中评'
+		when label = '2' then '差评' end) source,
+	sdr.class comment,
+	count(1) nums
+from souce_data_result sdr
+left join souce_data_date sdd
+on sdr.id = sdd.id
+where aspect = #{aspect} and label &lt;&gt; '3'
+group by sdr.label,sdr.class
 
 	</select>
 	<!-- 评价（按一天） -->
