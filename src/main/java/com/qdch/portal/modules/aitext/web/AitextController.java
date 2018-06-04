@@ -27,7 +27,16 @@ import com.qdch.portal.thirdplat.utils.HttpClientUtil;
 @RequestMapping(value = "${portalPath}")
 public class AitextController extends BaseController{
 
-	
+	/**
+	 * 
+	 * @author gaozhao
+	 * @date 2018年5月28日 
+	 * @TODO 页面接口
+	 */
+	@RequestMapping(value={"information"})
+	public String information(){
+		return "item/information";
+	}
 	/**
 	 * 
 	 * @author lixiaoyi
@@ -35,14 +44,14 @@ public class AitextController extends BaseController{
 	 * @TODO 地名接口
 	 */
 	@RequestMapping(value = {"land"})
-	public  String getLandName(String keyword,HttpServletResponse response){
+	public  void getLandName(String keyword,HttpServletResponse response){
 	    //  String keyword="贵阳大酒店老五星级，服务很亲切，中老年顾客很适合，不适合年青人，位置较优越，设备设施不够现代，早餐很丰富，VX：guiyanghotel。";//getPara("keyword");
 	      String url="http://47.95.206.224:8091/place?query="+keyword;
 	      String result=HttpClientUtil.sendGetRequest(url, "UTF-8");
 	          
 	     // System.out.println(result);
 	      Map<String,Object>  map =  JsonKit.json2map(result);
-	      return renderString(response, map);
+	      renderString(response, map);
 	          
 	      
 		}

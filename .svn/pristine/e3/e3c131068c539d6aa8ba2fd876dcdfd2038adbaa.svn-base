@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qdch.portal.littleproject.dao.SummaryProductModelDao">
+	<select id="getProductClassRatio" resultType="java.util.LinkedHashMap">
+		SELECT
+		SUBSTR(T.CPBM,1,4) AS CPDLBM,
+		L.NAME AS CPDLMC,
+		L.NAME AS CPDLINFO,
+		COUNT(1) AS CPSL
+		FROM LAKE_DD_TQS_CPXX T
+		LEFT JOIN LAKE_DD_TQS_CPLB L
+		ON
+		L.LBBM=SUBSTR(T.CPBM,1,4)
+		AND L.GRADE='2'
+		WHERE T.JYS='0015'
+		GROUP BY T.JYS,SUBSTR(T.CPBM,1,4),L.NAME
+	</select>
+
+	<select id="getProductDetail" parameterType="Map"
+		resultType="java.util.LinkedHashMap">
+		SELECT T.JYS,
+		SUBSTR(T.CPBM,1,4) AS CPLB,
+		L.NAME AS CPDLINFO,
+		T.CPMC,
+		T.CPDM,
+		T.KSJYR,
+		T.CSJ,
+		T.RKSL,
+		T.SPJDJG AS JDJG,
+		T.CCJG AS CCJG,
+		T.BJFS,
+		T.MSDYDWL,
+		H.MSMC,
+		T.SRZDF,
+		T.SRHZDF
+		FROM LAKE_DD_TQS_CPXX T
+		LEFT
+		JOIN LAKE_DD_TQS_CPLB L
+		ON L.LBBM=SUBSTR(T.CPBM,1,4)
+		AND L.GRADE='2'
+		LEFT JOIN
+		HUB_DD_TQS_JYS H
+		ON H.JYS=T.JYS
+		AND H.JYMS=T.JYMS
+		WHERE
+		T.JYS='0015' AND
+		SUBSTR(T.CPBM,1,4) = #{productClassNo}
+		AND T.CPDM = #{productCode}
+	</select>
+
+	<select id="getProductClassAndName" resultType="java.util.LinkedHashMap">
+		SELECT DISTINCT
+		SUBSTR(T.CPBM,1,4) AS CPLB,
+		L.NAME AS CPDLINFO,
+		T.CPDM,
+		T.CPMC
+		FROM
+		LAKE_DD_TQS_CPXX T
+		LEFT JOIN LAKE_DD_TQS_CPLB L
+		ON
+		L.LBBM=SUBSTR(T.CPBM,1,4) AND L.GRADE='2'
+		WHERE T.JYS='0015'
+		ORDER BY SUBSTR(T.CPBM,1,4)
+	</select>
+
+	<select id="getProductPriceTrend" parameterType="Map"
+		resultType="java.util.LinkedHashMap">
+		SELECT I.VDAY,
+		T.JYS,
+		SUBSTR(T.CPBM,1,4) AS CPDLBM,
+		L.NAME AS CPDLMC,
+		L.NAME AS CPDLINFO,
+		T.CPDM,
+		T.CPMC,
+		I.FVALUE
+		FROM LAKE_DD_TQS_CPXX T
+		LEFT JOIN LAKE_DD_TQS_CPLB L
+		ON L.LBBM=SUBSTR(T.CPBM,1,4)
+		AND L.GRADE='2'
+		LEFT JOIN INSIGHT_SETTLEMENT_PRICE I
+		ON I.JYS=T.JYS
+		AND I.CPBM=T.CPDM
+		AND I.CPMC=T.CPMC
+		WHERE I.VDAY &gt;= (SELECT TO_CHAR(TO_DATE(MAX(VDAY),'YYYYMMDD')-INTERVAL'15
+		DAY','YYYYMMDD') FROM INSIGHT_SETTLEMENT_PRICE WHERE JYS = '0015')
+		AND I.VDAY &lt;= (SELECT MAX(VDAY) FROM INSIGHT_SETTLEMENT_PRICE WHERE JYS = '0015')
+		AND T.JYS='0015'
+		AND SUBSTR(T.CPBM,1,4) = #{productClassNo}
+		AND T.CPDM = #{productCode}
+		ORDER BY I.VDAY
+	</select>
+</mapper>

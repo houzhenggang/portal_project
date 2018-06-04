@@ -1,0 +1,98 @@
+#\u5de5\u5546\u4fe1\u606f\u67e5\u8be2\u542f\u4fe1\u5b9dAPI\u670d\u52a1\u63a5\u53e3\u5730\u5740--\u6d4b\u8bd5\u73af\u5883:
+
+##    \u6309\u4f01\u4e1a\u5168\u540d/\u6ce8\u518c\u53f7/\u7edf\u4e00\u793e\u4f1a\u4fe1\u7528\u4ee3\u7801\u83b7\u53d6\u4f01\u4e1a\u5de5\u5546\u884c\u653f\u5904\u7f5a\u4fe1\u606f
+businessInfo.getAdminPunishByName = http://api.qixin.com/APITestService/v2/adminPunish/getAdminPunishByName
+
+##    \u6839\u636e\u4f01\u4e1a\u5168\u540d\u83b7\u53d6\u4f01\u4e1a\u73af\u4fdd\u5904\u7f5a\u4fe1\u606f
+businessInfo.getEPByName = http://api.qixin.com/APITestService/envp/getEPByName
+
+##    \u6839\u636e\u4f01\u4e1a\u5168\u540d\u83b7\u53d6\u6b20\u7a0e\u4fe1\u606f    
+businessInfo.getOverDueTaxByName = http://api.qixin.com/APITestService/overduetax/getOverDueTaxByName
+
+##    \u6839\u636e\u4f01\u4e1a\u5168\u540d\u83b7\u53d6\u80a1\u6743\u51fa\u8d28\u5217\u8868 
+businessInfo.getEquityQualitiesByName = http://api.qixin.com/APITestService/v2/equityPledge/getEquityQualitiesByName
+
+##    \u6839\u636e\u4f01\u4e1a\u5168\u540d\u83b7\u53d6\u52a8\u4ea7\u62b5\u62bc\u5217\u8868 
+businessInfo.getMortgagesByName = http://api.qixin.com/APITestService/v2/mortgage/getMortgagesByName
+
+##    \u6839\u636e\u4f01\u4e1a\u5168\u540d\u83b7\u53d6\u7ecf\u8425\u5f02\u5e38\u4fe1\u606f
+businessInfo.getAbnormalListByName = http://api.qixin.com/APITestService/v2/abnormal/getAbnormalListByName
+
+##    \u6839\u636e\u4f01\u4e1a\u5168\u540d\u83b7\u53d6\u4f01\u4e1a\u53f8\u6cd5\u534f\u52a9\u4fe1\u606f
+businessInfo.getJudicialChangeByName = http://api.qixin.com/APITestService/judicialFreeze/getJudicialChangeByName
+
+##    \u6839\u636e\u4f01\u4e1a\u5168\u540d\u83b7\u53d6\u88ab\u6267\u884c\u4eba\u4fe1\u606f 
+businessInfo.getExecutedpersonListByName = http://api.qixin.com/APITestService/v2/execution/getExecutedpersonListByName
+
+##    \u6839\u636e\u88ab\u6267\u884c id\u83b7\u53d6\u88ab\u6267\u884c\u4eba\u8be6\u60c5
+businessInfo.getExecutedpersonDetailById = http://api.qixin.com/APITestService/execution/getExecutedpersonDetailById
+
+##    \u6309\u4f01\u4e1a\u5168\u540d/\u6ce8\u518c\u53f7\u8fd4\u56de\u5931\u4fe1\u4eba\u4fe1\u606f keyword 
+businessInfo.getExecutionListByName = http://api.qixin.com/APITestService/v2/execution/getExecutionListByName
+
+##    \u6309\u4f01\u4e1a\u5168\u540d\u8fd4\u56de\u53f8\u6cd5\u62cd\u5356\u4fe1\u606f
+businessInfo.getAuctionsListByName = http://api.qixin.com/APITestService/auction/getAuctionsListByName
+
+##    \u6839\u636e\u4f01\u4e1a\u5168\u540d\u6216\u6ce8\u518c\u53f7\u7cbe\u786e\u83b7\u53d6\u4f01\u4e1a\u5de5\u5546\u8be6\u7ec6\u4fe1\u606f 
+businessInfo.getDetailByName = http://api.qixin.com/APITestService/v2/enterprise/getDetailByName
+
+##    \u6839\u636e\u4f01\u4e1a\u5168\u540d\u83b7\u53d6\u5f00\u5ead\u516c\u544a\u4fe1\u606f 
+businessInfo.getCourtNoticeByName = http://api.qixin.com/APITestService/courtnotice/getCourtNoticeByName
+
+##    \u6839\u636e\u4f01\u4e1a\u5168\u540d\u83b7\u53d6\u5f00\u5ead\u516c\u544a\u4fe1\u606f 
+businessInfo.getNoticeListByName = http://api.qixin.com/APITestService/notice/getNoticeListByName
+
+##    \u6309\u4f01\u4e1a\u5168\u540d\u8fd4\u56de\u88c1\u5224\u6587\u4e66\u5217\u8868  
+businessInfo.getLawsuitListByName = http://api.qixin.com/APITestService/lawsuit/getLawsuitListByName
+
+##    \u6309\u88c1\u5224\u6587\u4e66 id\u8fd4\u56de\u8be6\u7ec6\u4fe1\u606f  
+businessInfo.getLawsuitDetail = http://api.qixin.com/APITestService/lawsuit/getLawsuitDetail
+
+##     \u6309\u4f01\u4e1a\u5168\u540d/\u6ce8\u518c\u53f7\u8fd4\u56de\u5931\u4fe1\u4eba\u4fe1\u606f  
+businessInfo.getExecutionListByName = http://api.qixin.com/APITestService/v2/execution/getExecutionListByName
+
+##     \u6309\u5931\u4fe1 id \u8fd4\u56de\u5931\u4fe1\u4eba\u8be6\u60c5  
+businessInfo.getExecutionDetailById = http://api.qixin.com/APITestService/execution/getExecutionDetailById
+
+##     \u6309\u5931\u4fe1 id \u8fd4\u56de\u5931\u4fe1\u4eba\u8be6\u60c5  
+businessInfo.getCheckupListByName = http://api.qixin.com/APITestService/checkup/getCheckupListByName
+
+
+
+
+
+##	  \u4f01\u4e1a\u56fe\u8c31-\u4f01\u4e1a\u94fe\u56fe
+businessInfo.getChainDiagram = http://api.qixin.com/APITestService/nwEnterprise/getCompanyInfoByName
+##   \u4f01\u4e1a\u56fe\u8c31-\u4f01\u4e1a\u5173\u8054\u65cf\u8c31
+businessInfo.getRelationInfoByName = http://api.qixin.com/APITestService/relation/getRelationInfoByName
+##	 \u4f01\u4e1a\u56fe\u8c31-\u4f01\u4e1a\u80a1\u6743\u7ed3\u6784
+businessInfo.getEquityStructureData = http://api.qixin.com/APITestService/relation/getEquityStructureByName
+
+##\u6839\u636e\u4f01\u4e1a\u5168\u540d\u83b7\u53d6\u4f01\u4e1a\u5de5\u5546\u8be6\u60c5\u94fe\u56fe\u53ca\u5931\u4fe1\u4fe1\u606f
+businessInfo.getCompanyInfoByName = http://api.qixin.com/APITestService/nwEnterprise/getCompanyInfoByName
+
+##\u5de5\u5546\u5e74\u62a5
+businessInfo.getReportListByName = http://api.qixin.com/APITestService/reports/getReportListByName
+
+
+##\u62db\u8058\u4fe1\u606f
+businessInfo.getRecruitmentListByName = http://api.qixin.com/APITestService/v2/recruitment/getRecruitmentListByName
+
+#\u5546\u6807\u4fe1\u606f
+businessInfo.getTrademarkByName = http://api.qixin.com/APITestService/trademark/getTrademarkByName
+
+
+#\u4e13\u5229\u4fe1\u606f
+businessInfo.getPatentListByName = http://api.qixin.com/APITestService/patent/getPatentListByName
+
+#\u8f6f\u4ef6\u8457\u4f5c\u6743
+businessInfo.getCopyrightSoftByName = http://api.qixin.com/APITestService/copyright/getCopyrightSoftByName
+
+#\u8457\u4f5c\u6743
+businessInfo.getCopyrightByName = http://api.qixin.com/APITestService/copyright/getCopyrightByName
+
+
+##\u9ad8\u7ea7\u641c\u7d22
+businessInfo.advanceSearch = http://api.qixin.com/APITestService/advanceSearch/search
+
+

@@ -3,15 +3,10 @@ package com.qdch.portal.littleproject.entity;
 import com.qdch.portal.common.persistence.DataEntity;
 
 public class ProductTrendModel extends DataEntity<ProductTrendModel>{
-private String vday;
+private String vmonth;
 private String cplb;
 private double cpsl;
-public String getVday() {
-	return vday;
-}
-public void setVday(String vday) {
-	this.vday = vday;
-}
+
 public String getCplb() {
 	return cplb;
 }
@@ -23,6 +18,12 @@ public double getCpsl() {
 }
 public void setCpsl(double cpsl) {
 	this.cpsl = cpsl;
+}
+public String getVmonth() {
+	return vmonth;
+}
+public void setVmonth(String vmonth) {
+	this.vmonth = vmonth;
 }
 
 }

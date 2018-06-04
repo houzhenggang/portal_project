@@ -50,6 +50,7 @@ public class DangersController extends BaseController {
 	public String weiranIndexs(HttpServletRequest request,
 			HttpServletResponse response) {
 		try {
+			String[] tradeNames = { "青金中心", "联合信产", "文化产权" };
 			DynamicDataSource.setInsightDataSource();
 			List<Map<String, Object>> riskIndexs = dangerService
 					.getMarketRiskIndex();
@@ -65,15 +66,29 @@ public class DangersController extends BaseController {
 			String exValue = "";
 			String scpg = "";
 			KeHuFenLei ke = null;
-			for (Map<String, Object> map : riskIndexs) {
-				ke = new KeHuFenLei();
-				tradeName = formatterString(map.get("jysinfo"));
-				exValue = formatterString(map.get("wrzs"));
-				scpg = formatterString(map.get("scpg"));
-				ke.setGrs(tradeName);
-				ke.setJgs(exValue);
-				ke.setScpg(scpg);
-				riskList.add(ke);
+			boolean flag = false;
+			for (String trade : tradeNames) {
+				for (Map<String, Object> map : riskIndexs) {
+					ke = new KeHuFenLei();
+					tradeName = formatterString(map.get("jysinfo"));
+					if(tradeName.contains(trade)){
+						flag = true;
+						exValue = formatterString(map.get("wrzs"));
+						scpg = formatterString(map.get("scpg"));
+						ke.setGrs(tradeName);
+						ke.setJgs(exValue);
+						ke.setScpg(scpg);
+						riskList.add(ke);
+					}
+				}
+				if(!flag){
+					ke = new KeHuFenLei();
+					ke.setGrs(trade);
+					ke.setJgs("0");
+					ke.setScpg("");
+					riskList.add(ke);
+				}
+				flag = false;
 			}
 			// 数据传输对象收集
 			dto.setIndexs(riskList);
@@ -372,7 +387,7 @@ public class DangersController extends BaseController {
 			if (markets == null || markets.size() < 1) {
 				return this.resultSuccessData(request, response, "", null);
 			}
-			
+
 			return this.resultSuccessData(request, response, "", markets);
 		} catch (Exception e) {
 			logger.warn(" 风险-金融资产类风险监测-交易市场列表", e);
@@ -380,6 +395,7 @@ public class DangersController extends BaseController {
 		}
 
 	}
+
 	private String formatterString(Object obj) {
 		return obj == null ? "" : obj.toString();
 	}

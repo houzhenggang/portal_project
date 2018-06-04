@@ -28,6 +28,7 @@ public class SouceData extends DataEntity<SouceData> {
 	private String subdivision;		// subdivision
 	private String nums;
 	private String date;
+	private String max;
 	
 	private List<SouceData> souceDatas;
 	
@@ -125,5 +126,15 @@ public class SouceData extends DataEntity<SouceData> {
 	public void setSubdivision(String subdivision) {
 		this.subdivision = subdivision;
 	}
+
+	public String getMax() {
+		return max;
+	}
+
+	public void setMax(String max) {
+		this.max = max;
+	}
+
+	
 	
 }

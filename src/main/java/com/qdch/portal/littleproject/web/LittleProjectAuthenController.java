@@ -191,11 +191,14 @@ public class LittleProjectAuthenController  extends BaseController {
                             }
                         }
                     }
+                    request.getSession().setAttribute("loginUser",user);
 
                 }
                 //accountThirdplat.setId(thirdplat.getId());
                 //accountThirdplatDao.update(accountThirdplat);
+
             }
+
 
             return this.resultSuccessData(request,response,"",null);
         } catch (Exception e) {

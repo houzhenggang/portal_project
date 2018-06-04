@@ -88,5 +88,11 @@
 		DELETE FROM souce_data_result
 		WHERE id = #{id}
 	</update>
-	
+	<!-- 数据类别-->
+	<select id="getDataClass" resultType="SouceDataResult"
+		parameterType="String">
+		select distinct class as classe from souce_data t1 
+		inner join souce_data_result t2 where t1.id=t2.id and t2.aspect=#{aspect} ORDER BY t2.class
+
+	</select>
 </mapper>

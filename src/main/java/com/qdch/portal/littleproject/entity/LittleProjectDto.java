@@ -7,6 +7,7 @@ public class LittleProjectDto {
     private Object[] times;
     private Map<String,Object[]> timesMap ;
     private List<LittleProjectEntity> entities;
+    private List<LittleProjectEntity> culturalRights;
     private List<KeHuFenLei> indexs;
     
     public Object[] getTimes() {
@@ -39,6 +40,14 @@ public class LittleProjectDto {
 
 	public void setIndexs(List<KeHuFenLei> indexs) {
 		this.indexs = indexs;
+	}
+
+	public List<LittleProjectEntity> getCulturalRights() {
+		return culturalRights;
+	}
+
+	public void setCulturalRights(List<LittleProjectEntity> culturalRights) {
+		this.culturalRights = culturalRights;
 	}
 
 }

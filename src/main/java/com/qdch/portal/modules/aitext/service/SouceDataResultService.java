@@ -5,11 +5,13 @@ package com.qdch.portal.modules.aitext.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.qdch.portal.common.persistence.Page;
 import com.qdch.portal.common.service.CrudService;
+import com.qdch.portal.modules.aitext.entity.SouceData;
 import com.qdch.portal.modules.aitext.entity.SouceDataResult;
 import com.qdch.portal.modules.aitext.dao.SouceDataResultDao;
 
@@ -21,7 +23,8 @@ import com.qdch.portal.modules.aitext.dao.SouceDataResultDao;
 @Service
 @Transactional(readOnly = true)
 public class SouceDataResultService extends CrudService<SouceDataResultDao, SouceDataResult> {
-
+	@Autowired
+	SouceDataResultDao souceDataResultDao;
 	public SouceDataResult get(String id) {
 		return super.get(id);
 	}
@@ -42,6 +45,16 @@ public class SouceDataResultService extends CrudService<SouceDataResultDao, Souc
 	@Transactional(readOnly = false)
 	public void delete(SouceDataResult souceDataResult) {
 		super.delete(souceDataResult);
+	}
+	/**
+	 * 详细数据-数据类别
+	 * @author gaozhao
+	 * @date 2018年5月31日
+	 * @TODO
+	 */
+	public List<SouceDataResult> getDataClass(String aspect) {
+		
+		return souceDataResultDao.getDataClass(aspect);
 	}
 	
 }
