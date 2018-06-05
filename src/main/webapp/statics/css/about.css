@@ -1,0 +1,23 @@
+.banner {
+    padding-top: 6em;
+    background: url(../images/about/banner.jpg) 50%;
+    background-size: cover;
+    height: 256px;
+    line-height: 256px;
+    text-align: center;
+}
+.banner h1{
+    font-size: 40px;
+    color: #fff;
+}
+section.introduce{
+    padding-top: 80px;
+    padding-bottom: 90px;
+    color: #666;
+}
+section.introduce h2{
+    margin-bottom: 40px;
+}
+section.introduce p{
+    line-height: 1.8;
+}

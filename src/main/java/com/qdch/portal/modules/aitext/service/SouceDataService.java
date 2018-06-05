@@ -10,8 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.mysql.fabric.xmlrpc.base.Array;
-import com.qdch.portal.common.persistence.Page;
+
 import com.qdch.portal.common.service.CrudService;
 import com.qdch.portal.modules.aitext.entity.SouceData;
 import com.qdch.portal.modules.aitext.dao.SouceDataDao;

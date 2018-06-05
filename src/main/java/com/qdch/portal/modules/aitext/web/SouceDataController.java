@@ -21,8 +21,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.huaban.analysis.jieba.JiebaSegmenter;
-import com.huaban.analysis.jieba.JiebaSegmenter.SegMode;
+//import com.huaban.analysis.jieba.JiebaSegmenter;
+//import com.huaban.analysis.jieba.JiebaSegmenter.SegMode;
 import com.qdch.portal.common.config.Global;
 import com.qdch.portal.common.persistence.Page;
 import com.qdch.portal.common.web.BaseController;
@@ -141,42 +141,42 @@ public class SouceDataController extends BaseController {
 	 */
 	@RequestMapping(value = { "wordCloud" })
 	public void getWordCloud(HttpServletResponse response, String aspect) {
-		SouceData souceData = souceDataService.getWordCloud(aspect);
-		Map<String, Integer> map = new HashMap<String, Integer>();
-		JiebaSegmenter segmenter = new JiebaSegmenter();
-		String textString =souceData.getComment();
-//		textString=textString.trim().replace(",", "").replace(";", "").replace(".", "")
-//				.replace("!", "").replace("?", "").replace(":", "")
-//				.replace("\"", "").replace("'", "").replace("，", "").replace("。", "");
-		textString=textString.replaceAll("[\\pP\\pS\\pZ]", "");
-		List<String> wordList = segmenter.sentenceProcess(textString);
-		for (String s : wordList) {
-			if (map.containsKey(s)) {
-				map.put(s, map.get(s) + 1);
-			} else {
-				map.put(s, 1);
-			}
-		}
-		// 这里将map.entrySet()转换成list
-		List<Map.Entry<String, Integer>> list = new ArrayList<Map.Entry<String, Integer>>(
-				map.entrySet());
-		// 然后通过比较器来实现排序
-		Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
-			// 升序排序
-			public int compare(Entry<String, Integer> e1,
-					Entry<String, Integer> e2) {
-				return e2.getValue() - e1.getValue();
-			}
+//		SouceData souceData = souceDataService.getWordCloud(aspect);
+//		Map<String, Integer> map = new HashMap<String, Integer>();
+//		JiebaSegmenter segmenter = new JiebaSegmenter();
+//		String textString =souceData.getComment();
+////		textString=textString.trim().replace(",", "").replace(";", "").replace(".", "")
+////				.replace("!", "").replace("?", "").replace(":", "")
+////				.replace("\"", "").replace("'", "").replace("，", "").replace("。", "");
+//		textString=textString.replaceAll("[\\pP\\pS\\pZ]", "");
+//		List<String> wordList = segmenter.sentenceProcess(textString);
+//		for (String s : wordList) {
+//			if (map.containsKey(s)) {
+//				map.put(s, map.get(s) + 1);
+//			} else {
+//				map.put(s, 1);
+//			}
+//		}
+//		// 这里将map.entrySet()转换成list
+//		List<Map.Entry<String, Integer>> list = new ArrayList<Map.Entry<String, Integer>>(
+//				map.entrySet());
+//		// 然后通过比较器来实现排序
+//		Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
+//			// 升序排序
+//			public int compare(Entry<String, Integer> e1,
+//					Entry<String, Integer> e2) {
+//				return e2.getValue() - e1.getValue();
+//			}
+//
+//		});
+//		// 输出出现频率最高的10个
+//
+//		/*for (int i = 0; i < 2; i++) {
+//			Map.Entry<String, Integer> e = list.get(i);
+//			System.out.println(e.getKey() + ":" + e.getValue());
+//		}*/
 
-		});
-		// 输出出现频率最高的10个
-
-		/*for (int i = 0; i < 2; i++) {
-			Map.Entry<String, Integer> e = list.get(i);
-			System.out.println(e.getKey() + ":" + e.getValue());
-		}*/
-
-		renderString(response, list);
+		renderString(response, "");
 	}
 
 	/**

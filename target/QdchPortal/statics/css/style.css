@@ -1,0 +1,231 @@
+/*全局设置-----start*/
+@media all {
+    * {
+        font-family: PingFang SC, helvetica neue, arial, microsoft yahei, sans-serif;
+    }
+    a{
+        color: #666;
+    }
+    a:hover{
+        color: #0063ff;
+    }
+    a,
+    a:hover,
+    a:focus,
+    a:visited{
+        text-decoration: none;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #333;
+        font-weight: 400;
+    }
+    ul {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+    }
+
+    .glyphicon {
+        margin-left: .5em;
+        margin-right: .5em;
+    }
+    .fixTop{
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+}
+
+/*导航条------start*/
+@media all {
+    body > nav.navbar {
+        z-index: 1;
+        margin-bottom: 0;
+        min-height: 60px;
+        border-radius: 0;
+        background-color: #000;
+        min-width: 768px;
+    }
+
+    /*logo*/
+    .navbar-brand {
+        padding-top: 18px;
+        width: 8.5em;
+    }
+    .navbar-brand img{
+        filter: saturate(0) brightness(2);
+    }
+
+
+    /*一级菜单*/
+    ul.navbar-nav:first-child {
+        position: relative;
+        left: calc(36% - 14em);
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+        padding: 20px 20px 18px;
+        color: #fff;
+    }
+
+    .navbar-inverse .navbar-nav > li:hover {
+        color: #0063ff;
+    }
+
+    .navbar-inverse .navbar-nav:first-child > li:hover > a,
+    .navbar-inverse .navbar-nav:first-child > li.active > a,
+    .navbar-inverse .navbar-nav:first-child > li:hover > a.dropdown-toggle,
+    .navbar-inverse .navbar-nav:first-child > .active > a:focus,
+    .navbar-inverse .navbar-nav:first-child > .active > a:hover,
+    .navbar-inverse .navbar-nav:first-child > li > a:focus,
+    .navbar-inverse .navbar-nav:first-child > li > a:hover {
+        color: #0063ff;
+        background: none;
+    }
+
+
+    /*二级三级菜单盒子*/
+    ul.navbar-nav > .dropdown > .dropdown-menu {
+        padding: 3em 1em;
+        width: 14em;
+        height: 20em;
+        border-right: 1px solid #333;
+        border-radius: 0;
+        display: block;
+        transition: transform 200ms ease, opacity 300ms linear; /*待修*/
+        z-index: -1;
+        background-color: #000;
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    ul.navbar-nav > .dropdown ul {
+        /*list-style: none;*/
+        padding-left: 2em;
+    }
+
+    ul.navbar-nav > .dropdown ul li > a,
+    ul.navbar-nav > .dropdown ul h5 {
+        font-size: 12px;
+        color: #999;
+    }
+
+    ul.navbar-nav > .dropdown ul li > a > span.icon {
+        filter: saturate(0);
+    }
+
+    ul.navbar-nav > .dropdown.open > .dropdown-menu {
+        opacity: 1;
+        transform: translateY(-2%);
+    }
+
+    .dropdown > .dropdown-menu > li > a:focus,
+    .dropdown > .dropdown-menu > li > a:hover,
+    .dropdown > .dropdown-menu > li > a.active {
+        color: #0063ff;
+        background-color: transparent;
+    }
+
+    .dropdown > .dropdown-menu > li > a.active .icon {
+        filter: initial;
+    }
+
+    /*二级菜单*/
+    ul.navbar-nav > .dropdown > .dropdown-menu:first-of-type > li > a {
+        line-height: 34px;
+    }
+
+    ul.navbar-nav > .dropdown > .dropdown-menu:first-of-type > li > a > span.icon {
+        display: inline-block;
+        position: absolute;
+        right: 3em;
+        margin-top: 1em;
+        width: 4px;
+        height: 6px;
+        background: url(../images/com/i_menu-right.png) no-repeat;
+    }
+
+    /*三级菜单*/
+    ul.navbar-nav > .dropdown > .dropdown-menu:nth-of-type(2) {
+        z-index: -2;
+        left: 13em;
+        width: 21em;
+    }
+
+    ul.navbar-nav > .dropdown > .dropdown-menu:nth-of-type(2) > li:not(:first-of-type) {
+        display: none;
+    }
+
+    ul.navbar-nav > .dropdown > .dropdown-menu:nth-of-type(2) h5 {
+        color: #fff;
+    }
+
+    ul.navbar-nav > .dropdown > .dropdown-menu:nth-of-type(2) p {
+        color: #999;
+    }
+
+    ul.navbar-nav > .dropdown > .dropdown-menu:nth-of-type(2) > li > ul > li:hover * {
+        text-decoration: none;
+        color: #0063ff;
+    }
+    ul.navbar-nav:nth-child(2) .glyphicon{
+        top: 3px;
+    }
+    ul.navbar-nav:nth-child(2) li{
+        opacity: .8;
+    }
+
+    ul.navbar-nav:nth-child(2) li>a {
+        font-size: 12px;
+    }
+
+}
+/*footer*/
+@media all {
+
+    footer {
+        padding-top: 65px;
+        color: #ccc;
+        background-color: #000;
+    }
+
+    footer h3 {
+        font-size: 14px;
+        color: #fff
+    }
+
+    footer .introduce p {
+        margin-top: 11px;
+        font-size: 12px;
+        line-height: 30px;
+        text-indent: 2em;
+    }
+
+    footer p.copyright {
+        margin: 50px 0 0;
+        line-height: 80px;
+        font-size: .8em;
+        border-top: 1px solid #575757;
+    }
+    footer h3 ~ ul>li{
+        font-size: 12px;
+        line-height: 30px;
+    }
+    footer h3 ~ ul>li>a,
+    footer h3 ~ ul>li>a:visited{
+        font-size: 12px;
+        color: #ccc;
+    }
+    footer h3 ~ ul>li>a:hover{
+        color: #fff;
+    }
+    footer h3 ~ ul>li.QRcode{
+        width: 8em;
+        margin-top: 1.4em;
+    }
+    footer h3 ~ ul>li>address{
+        line-height: inherit;
+    }
+}

@@ -33,6 +33,8 @@ public class Page<T> {
 	private int last;// 尾页索引
 	private int prev;// 上一页索引
 	private int next;// 下一页索引
+
+	private int pageCount; //总页数
 	
 	private boolean firstPage;//是否是第一页
 	private boolean lastPage;//是否是最后一页
@@ -195,7 +197,15 @@ public class Page<T> {
 		}
 		
 	}
-	
+
+	public int getPageCount() {
+		return pageCount;
+	}
+
+	public void setPageCount(int pageCount) {
+		this.pageCount = pageCount;
+	}
+
 	/**
 	 * 默认输出当前分页标签 
 	 * <div class="page">${page}</div>
@@ -272,7 +282,7 @@ public class Page<T> {
 		sb.append(funcName+"("+pageNo+",this.value,'"+funcParam+"');\" onclick=\"this.select();\"/> 条，");
 		sb.append("共 " + count + " 条"+(message!=null?message:"")+"</a></li>\n");
 
-		sb.insert(0,"<ul>\n").append("</ul>\n");
+		sb.insert(0,"<ul class=\"pagination\">\n").append("</ul>\n");
 		
 		sb.append("<div style=\"clear:both;\"></div>");
 

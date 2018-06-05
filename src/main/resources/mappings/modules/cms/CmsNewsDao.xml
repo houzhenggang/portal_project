@@ -486,4 +486,19 @@
 				AND daily_id=#{dailyId}
 			)
 	</select>
+
+
+	<select id="getContentById" resultType="CmsNews">
+		SELECT
+		<include refid="cmsNewsColumns"/>
+		,b.content_html
+		FROM
+			cms_news a
+		LEFT JOIN cms_news_data b ON a.id = b.news_id
+		AND b.del_flag = '0'
+		<include refid="cmsNewsJoins"/>
+		WHERE
+			a.id =#{id}
+		AND a.del_flag = '0'
+	</select>
 </mapper>
