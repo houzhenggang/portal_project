@@ -42,7 +42,7 @@ public class CmsNewsService extends CrudService<CmsNewsDao, CmsNews> {
 	}
 	
 	public Page<CmsNews> findPage(Page<CmsNews> page, CmsNews cmsNews) {
-		page.setPageSize(1);
+
 		return super.findPage(page, cmsNews);
 	}
 	

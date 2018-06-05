@@ -22,7 +22,7 @@ import com.qdch.portal.common.utils.Collections3;
 import com.qdch.portal.common.utils.Json;
 import com.qdch.portal.common.utils.excel.annotation.ExcelField;
 import com.qdch.portal.common.utils.excel.fieldtype.RoleListType;
-import com.qdch.portal.modules.subscribe.entity.AccountSubscribeHistory;
+
 import com.qdch.portal.modules.sys.entity.Role.RoleTypeEnum;
 import com.qdch.portal.modules.sys.service.SystemService;
 import com.qdch.portal.thirdplat.entity.AccountThirdplat;
@@ -66,7 +66,7 @@ public class User extends DataEntity<User> {
 	private String countCommen;//用户总关注数
 	private String countFans;//用户总粉丝数
 	
-	private List<AccountSubscribeHistory> accountSubscribeHistorylist; //查询用户订阅
+
 	
 	public String getCountSubscribe() {
 		return countSubscribe;
@@ -104,14 +104,7 @@ public class User extends DataEntity<User> {
 		this.integration = integration;
 	}
 
-	public List<AccountSubscribeHistory> getAccountSubscribeHistorylist() {
-		return accountSubscribeHistorylist;
-	}
 
-	public void setAccountSubscribeHistorylist(
-			List<AccountSubscribeHistory> accountSubscribeHistorylist) {
-		this.accountSubscribeHistorylist = accountSubscribeHistorylist;
-	}
 
 	private int getType() {
 		return type;
