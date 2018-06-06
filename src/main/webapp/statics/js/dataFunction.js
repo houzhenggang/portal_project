@@ -399,7 +399,8 @@ function echartsWater(data){
 	var arrData = [];
 	$.each(data,function(index,item){
 		var fvalue=1-item.source/item.nums+"";
-		result = fvalue.substr(0,fvalue.indexOf(".")+5); 
+		result = fvalue.substr(0,fvalue.indexOf(".")+5);
+		
 		arrData.push({
 			name:"总体友好度",
 			value:result
@@ -608,17 +609,48 @@ function echartsPie(data){
 function echartsPJ(data){
 	var title = [];
 	var arrData = [];
+	var arrh=[];//每次好评的数量
+	var arrz=[];//每次中评的数量
+	var arrc=[];//每次差评的数量
+	var n=0;
+	//把标题统计出来
 	$.each(data,function(index,item){
+		if("好评"==item.source){
+			n++;
+		}
+	})
+	$.each(data,function(index,item){
+		title.push(item.comment);
+		if((index+1)==n){
+			return false;
+		}
+	})
+	//每次好中差的数量
+	for(var i=0;i<title.length;i++){
+		$.each(data,function(index,item){
+			if(title[i]==item.comment && item.source=='好评'){
+				arrh.push(item.nums);
+			}else if(title[i]==item.comment && item.source=='中评'){
+				arrz.push(item.nums);
+			}else{
+				arrc.push(item.nums);
+			}
+		})
+		
+	}
+
+	
+	/*$.each(data,function(index,item){
 		arrData.push({
 			type:'bar',
             stack: '类型',
             barWidth : 30,
 			itemStyle: {normal: {areaStyle: {type: 'default'}}},
-			name:index.source,
+			name:item.source,
 			value:index.nums
 		});
-		title.push(index.source);
-	})
+		
+	})*/
 	var _pj = echarts.init($("#echartsPJ")[0]);
 	_pj.setOption({
 		tooltip : {
@@ -662,28 +694,28 @@ function echartsPJ(data){
 	            }
 	        }
 	    ],
-	    series : arrData
-	    /*[
+	    series : //arrData
+	    [
 	        {
 	            name:'好评',
 	            type:'bar',
 	            barWidth : 30,
 	            stack: '类型',
-	            data:[120, 132, 101, 134, 90, 230, 210]
+	            data:arrh
 	        },
 	        {
 	            name:'中评',
 	            type:'bar',
 	            stack: '类型',
-	            data:[220, 182, 191, 234, 290, 330, 310]
+	            data:arrz
 	        },
 	        {
 	            name:'差评',
 	            type:'bar',
 	            stack: '类型',
-	            data:[150, 232, 201, 154, 190, 330, 410]
+	            data:arrc
 	        }
-	    ]*/
+	    ]
 	})
 }
 function echartsLine(data){

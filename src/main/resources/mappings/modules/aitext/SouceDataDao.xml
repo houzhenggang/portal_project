@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qdch.portal.modules.aitext.dao.SouceDataDao">
+
+	<sql id="souceDataColumns">
+		a.id AS "id",
+		a.source AS "source",
+		a.time AS "time",
+		a.area
+		AS "area",
+		a.comment AS "comment",
+		a.emotion AS "emotion",
+		a.extract AS
+		"extract",
+		a.subdivision AS "subdivision"
+	</sql>
+
+	<sql id="souceDataJoins">
+	</sql>
+
+	<select id="get" resultType="SouceData">
+		SELECT
+		<include refid="souceDataColumns" />
+		FROM souce_data a
+		<include refid="souceDataJoins" />
+		WHERE a.id = #{id}
+	</select>
+
+	<select id="findList" resultType="SouceData">
+		SELECT
+		<include refid="souceDataColumns" />
+		FROM souce_data a
+		<include refid="souceDataJoins" />
+		<where>
+
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+
+	<select id="findAllList" resultType="SouceData">
+		SELECT
+		<include refid="souceDataColumns" />
+		FROM souce_data a
+		<include refid="souceDataJoins" />
+		<where>
+
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+
+	<insert id="insert">
+		INSERT INTO souce_data(
+		id,
+		source,
+		time,
+		area,
+		comment,
+		emotion,
+		extract,
+		subdivision
+		) VALUES (
+		#{id},
+		#{source},
+		#{time},
+		#{area},
+		#{comment},
+		#{emotion},
+		#{extract},
+		#{subdivision}
+		)
+	</insert>
+
+	<update id="update">
+		UPDATE souce_data SET
+		source = #{source},
+		time =
+		#{time},
+		area = #{area},
+		comment = #{comment},
+		emotion = #{emotion},
+		extract = #{extract},
+		subdivision = #{subdivision}
+		WHERE id = #{id}
+	</update>
+
+	<update id="delete">
+		DELETE FROM souce_data
+		WHERE id = #{id}
+	</update>
+	<select id="getResource" resultType="SouceData" parameterType="String">
+		SELECT t1.source as source,count(1) as nums from souce_data t1
+		INNER
+		JOIN souce_data_result t2 on t2.id=t1.id where t2.aspect=#{aspect}
+		GROUP BY t1.source
+	</select>
+	<select id="getResourceby" resultType="SouceData"
+		parameterType="com.qdch.portal.modules.aitext.entity.SouceData">
+		SELECT t1.source as source,count(1) as nums from
+		souce_data t1
+		INNER JOIN souce_data_result t2 on t2.id=t1.id where
+		t2.aspect=#{area} and
+		time&gt;=cast(DATE_SUB(NOW(),INTERVAL #{nums} day)
+		as date)
+		GROUP
+		BY t1.source
+	</select>
+	<select id="getResourcebyone" resultType="SouceData"
+		parameterType="String">
+		SELECT t1.source as source,count(1) as nums from
+		souce_data t1
+		INNER JOIN souce_data_result t2 on t2.id=t1.id where
+		t2.aspect=#{aspect} and
+		time=CAST(NOW() as date)
+		GROUP BY t1.source
+	</select>
+	<select id="getArea" resultType="SouceData" parameterType="String">
+		SELECT t1.area as area,count(1) as nums,
+		(select max(t3.nums) from
+		(SELECT t1.area as area,count(1) as nums from souce_data t1
+		INNER JOIN
+		souce_data_result t2 on t2.id=t1.id where t2.aspect=#{aspect}
+		GROUP BY
+		t1.area) t3) max
+		from souce_data t1
+		INNER JOIN souce_data_result t2 on
+		t2.id=t1.id where
+		t2.aspect=#{aspect}
+		GROUP BY t1.area
+	</select>
+	<select id="getAreabycon" resultType="SouceData"
+		parameterType="com.qdch.portal.modules.aitext.entity.SouceData">
+		SELECT t1.area as area,count(1) as nums,
+		(select
+		max(t3.nums) from
+		(SELECT t1.area as area,count(1) as nums from
+		souce_data t1
+		INNER JOIN
+		souce_data_result t2 on t2.id=t1.id where
+		t2.aspect=#{area} and
+		time&gt;=cast(DATE_SUB(NOW(),INTERVAL #{nums} day) as
+		date)
+		GROUP BY
+		t1.area) t3) max
+		from souce_data
+		t1
+		INNER JOIN
+		souce_data_result t2 on t2.id=t1.id where
+		t2.aspect=#{area} and
+		time&gt;=cast(DATE_SUB(NOW(),INTERVAL #{num} day) as
+		date)
+		GROUP
+		BY t1.area
+
+	</select>
+	<select id="getAreabyone" resultType="SouceData" parameterType="String">
+		SELECT t1.area as area,count(1) as nums,
+		(select max(t3.nums) from
+		(SELECT t1.area as area,count(1) as nums from
+		souce_data t1
+		INNER JOIN
+		souce_data_result t2 on t2.id=t1.id where
+		t2.aspect=#{area} and
+		time=cast(now() as date)
+		GROUP BY
+		t1.area) t3) max
+		from souce_data t1
+		INNER JOIN
+		souce_data_result t2 on t2.id=t1.id where
+		t2.aspect=#{area}
+		and
+		time=cast(now() as date)
+		GROUP BY t1.area
+	</select>
+	<select id="getReSoucreall" resultType="SouceData"
+		parameterType="String">
+		SELECT DATE_FORMAT(t1.time,'%Y-%m-%d') as date,t1.source
+		as
+		source,count(1) as nums
+		from souce_data t1 INNER JOIN
+		souce_data_result
+		t2 on t2.id=t1.id where
+		t2.aspect=#{aspect}
+		GROUP BY
+		t1.time,t1.source
+		union ALL
+		select DATE_FORMAT(t3.time,'%Y-%m-%d') as
+		vday,'全部' as source,
+		count(1) as nums from souce_data t3
+		INNER JOIN
+		souce_data_result t2 on
+		t2.id=t3.id
+		where t2.aspect=#{aspect}
+		group by
+		t3.time order by  date,nums
+
+	</select>
+	<select id="getResourceday" resultType="SouceData"
+		parameterType="String">
+		SELECT DATE_FORMAT(t1.time, '%Y-%m-%d') AS date,t1.source
+		as source,count(1)
+		as nums from souce_data t1
+		INNER JOIN
+		souce_data_result t2 on t2.id=t1.id
+		where t2.aspect=#{aspect}
+		and
+		cast(time=NOW() as date) GROUP BY t1.source
+	</select>
+	<select id="getResourcebycon" resultType="SouceData"
+		parameterType="com.qdch.portal.modules.aitext.entity.SouceData">
+		SELECT DATE_FORMAT(t1.time, '%Y-%m-%d') AS
+		date,t1.source
+		AS source,count(1)
+		AS nums
+		FROM souce_data t1 INNER JOIN
+		souce_data_result t2 on t2.id=t1.id WHERE
+		t2.aspect=#{area} and time
+		&gt;=cast( DATE_SUB(NOW(),INTERVAL #{nums} DAY) as date )
+		GROUP BY
+		t1.source,
+		DATE_FORMAT(t1.time, '%Y-%m-%d')
+		UNION ALL
+		SELECT DATE_FORMAT(t3.time,
+		'%Y-%m-%d') AS vday,
+		'全部' AS source,count(1) AS
+		nums FROM souce_data t3
+		INNER JOIN
+		souce_data_result t2 on t2.id=t3.id
+		where t2.aspect=#{area} and time &gt;=cast( DATE_SUB(NOW(),INTERVAL
+		#{nums} DAY) as date )
+		GROUP BY t3.source,
+		DATE_FORMAT(t3.time, '%Y-%m-%d')
+	</select>
+
+	<select id="getNews" resultType="SouceData" parameterType="String">
+		select t1.comm as comment,t1.source as source,t1.area as area from
+		souce_data t1 INNER JOIN souce_data_result t2 on t2.id=t1.id
+		where
+		t2.aspect=#{aspect} ORDER BY t1.time
+	</select>
+	<select id="getResourceByday" resultType="SouceData"
+		parameterType="String">
+		SELECT DATE_FORMAT(time,'%Y-%m-%d') as vday,count(1) as
+		nums from souce_data
+		t1
+		where source=#{source} GROUP BY
+		DATE_FORMAT(time,'%Y-%m-%d')
+
+	</select>
+	<!-- 词云 -->
+	<select id="getWordCloud" resultType="SouceData"
+		parameterType="String">
+		select group_concat(comm) as comment from souce_data where id &lt;= 10
+
+	</select>
+	<!-- 热度状况（所有） -->
+	<select id="getHotall" resultType="SouceData"
+		parameterType="String">
+		select
+		(select count(aspect) from souce_data_result where aspect=#{aspect})/
+		(select count(aspect) from souce_data_result) nums
+
+	</select>
+	<!-- 热度状况（按一天） -->
+	<select id="getHotday" resultType="SouceData"
+		parameterType="String">
+		
+
+	</select>
+	<!-- 热度状况（按三天或一周） -->
+	<select id="getHotbycon" resultType="SouceData"
+		parameterType="com.qdch.portal.modules.aitext.entity.SouceData">
+		
+
+	</select>
+	<!-- 数据来源 -->
+	<select id="getData" resultType="SouceData"
+		parameterType="String">
+		select distinct source from souce_data t1 
+       inner join souce_data_result t2 where t1.id=t2.id and t2.aspect=#{aspect} order by t1.source
+
+	</select>
+	<!-- 抽取信息 -->
+	<select id="getExtract" resultType="SouceData">
+		
+
+	</select>
+	<select id="getExtractbyone" resultType="SouceData">
+		
+
+	</select>
+	<select id="getExtractby" resultType="SouceData">
+		
+
+	</select>
+	<!-- 友好度（所有） -->
+	<select id="getFrendlyall" resultType="SouceData"
+		parameterType="String">
+		select
+	sum(if(label = '2',1,0)) source,
+	count(1) nums
+from souce_data_result where aspect=#{aspect}
+
+	</select>
+	<!-- 友好度（按一天） -->
+	<select id="getFrendlyday" resultType="SouceData"
+		parameterType="String">
+		select
+	sum(if(label = '2',1,0)) source,
+	count(1) nums
+from souce_data_result sdr
+left join souce_data_date sdd
+on sdr.id = sdd.id
+where sdd.time = 30 and sdr.aspect=#{aspect}
+
+	</select>
+	<!-- 友好度（按三天或一周） -->
+	<select id="getFrendlybycon" resultType="SouceData"
+		parameterType="com.qdch.portal.modules.aitext.entity.SouceData">
+		select
+	sum(if(label = '2',1,0)) source,
+	count(1) nums
+from souce_data_result sdr
+left join souce_data_date sdd
+on sdr.id = sdd.id
+where sdd.time &gt;= #{nums} and sdr.aspect=#{area} #28是参数，当28时表示三天，24时表示七天
+
+	</select>
+	<!-- 负面评论分布（所有） -->
+	<select id="getNegativeall" resultType="SouceData"
+		parameterType="String">
+		select
+	source,
+	sum(if(label = '2',1,0)) nums
+from souce_data_result sdr
+left join souce_data_date sdd
+on sdr.id = sdd.id where sdr.aspect=#{aspect}
+group by source
+
+	</select>
+	<!-- 负面评论分布（按一天） -->
+	<select id="getNegativeday" resultType="SouceData"
+		parameterType="String">
+		select
+	source,
+	sum(if(label = '2',1,0)) nums
+from souce_data_result sdr
+left join souce_data_date sdd
+on sdr.id = sdd.id
+where sdd.time = 30 and sdr.aspect=#{aspect}
+group by source
+
+	</select>
+	<!-- 负面评论分布负面评论分布（按三天或一周） -->
+	<select id="getNegativebycon" resultType="SouceData"
+		parameterType="com.qdch.portal.modules.aitext.entity.SouceData">
+	select
+	source,
+	sum(if(label = '2',1,0)) nums
+from souce_data_result sdr
+left join souce_data_date sdd
+on sdr.id = sdd.id
+where sdd.time &gt;=#{nums} and sdr.aspect=#{area} #28是参数，当28时表示三天，24时表示七天
+group by source
+
+	</select>
+	<!-- 全网声量（所有） -->
+	<select id="getNetworkall" resultType="SouceData"
+		parameterType="String">
+		select if(class='不相关','无细分标签','有细分标签') source,count(1) nums
+from souce_data_result where aspect=#{aspect}
+group by if(class='不相关','无细分标签','有细分标签')
+
+	</select>
+	<!-- 全网声量（按一天） -->
+	<select id="getNetworkday" resultType="SouceData"
+		parameterType="String">
+	select if(class='不相关','无细分标签','有细分标签') bqfl,count(1) nums
+from souce_data_result sdr
+left join souce_data_date sd
+on sdr.id = sd.id
+where sd.time = 30 and sdr.aspect=#{aspect}
+group by if(class='不相关','无细分标签','有细分标签')	
+
+	</select>
+	<!-- 全网声量（按三天或一周） -->
+	<select id="getNetworkbycon" resultType="SouceData"
+		parameterType="com.qdch.portal.modules.aitext.entity.SouceData">
+	select if(class='不相关','无细分标签','有细分标签') bqfl,count(1) nums
+from souce_data_result sdr
+left join souce_data_date sd
+on sdr.id = sd.id
+where sd.time &gt;= #{nums}	and sdr.aspect=#{area} #28是参数,28表示3天，24表示7天
+group by if(class='不相关','无细分标签','有细分标签')	
+
+	</select>
+	<!-- 评价折线词云（所有） -->
+	<select id="getBrokenall" resultType="SouceData"
+		parameterType="String">
+		
+
+	</select>
+	<!-- 评价折线词云（按一天） -->
+	<select id="getBrokenday" resultType="SouceData"
+		parameterType="String">
+		
+
+	</select>
+	<!-- 评价折线词云（按三天或一周） -->
+	<select id="getBrokenbycon" resultType="SouceData"
+		parameterType="com.qdch.portal.modules.aitext.entity.SouceData">
+		
+
+	</select>
+	<!-- 评价（所有） -->
+	<select id="getEvaluateall" resultType="SouceData"
+		parameterType="String">
+		select
+	(case when label = '0' then '好评'
+		when label = '1' then '中评'
+		when label = '2' then '差评' end) source,
+	sdr.class comment,
+	count(1) nums
+from souce_data_result sdr
+left join souce_data_date sdd
+on sdr.id = sdd.id
+where aspect = #{aspect} and label &lt;&gt; '3'
+group by sdr.label,sdr.class
+
+	</select>
+	<!-- 评价（按一天） -->
+	<select id="getEvaluateday" resultType="SouceData"
+		parameterType="String">
+		
+
+	</select>
+	<!-- 评价（按三天或一周） -->
+	<select id="getEvaluatebycon" resultType="SouceData"
+		parameterType="com.qdch.portal.modules.aitext.entity.SouceData">
+		
+
+	</select>
+	<!-- 评价信息（所有） -->
+	<select id="getInformationall" resultType="SouceData"
+		parameterType="String">
+		
+
+	</select>
+	<!-- 评价信息（按一天） -->
+	<select id="getInformationday" resultType="SouceData"
+		parameterType="String">
+		
+
+	</select>
+	<!-- 评价信息（按三天或一周） -->
+	<select id="getInformationbycon" resultType="SouceData"
+		parameterType="com.qdch.portal.modules.aitext.entity.SouceData">
+		
+
+	</select>
+	<!-- 折线，词云详细（所有） -->
+	<select id="getBrokenInformationall" resultType="SouceData"
+		parameterType="String">
+		
+
+	</select>
+	<!-- 折线，词云详细（按一天） -->
+	<select id="getBrokenInformationday" resultType="SouceData"
+		parameterType="String">
+		
+
+	</select>
+	<!-- 折线，词云详细（按三天或一周） -->
+	<select id="getBrokenInformationbycon" resultType="SouceData"
+		parameterType="com.qdch.portal.modules.aitext.entity.SouceData">
+		
+
+	</select>
+</mapper>
