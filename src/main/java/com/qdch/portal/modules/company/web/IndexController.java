@@ -23,34 +23,34 @@ import javax.servlet.http.HttpServletResponse;
 
 public class IndexController extends BaseController {
 
-    @RequestMapping(value = {"${portalPath}/company"})
+    @RequestMapping(value = {"/"})
 
     public String index(HttpServletRequest request,HttpServletResponse response, Model model) {
 
         return "modules/pages/index";
     }
 
-    @RequestMapping(value = {"${portalPath}/about"})
+    @RequestMapping(value = {"about"})
 
     public String about(HttpServletRequest request,HttpServletResponse response, Model model) {
 
         return "modules/pages/about";
     }
-    @RequestMapping(value = {"${portalPath}/solution"})
+    @RequestMapping(value = {"solution"})
 
     public String solution(HttpServletRequest request,HttpServletResponse response, Model model) {
 
         return "modules/pages/solution";
     }
 
-    @RequestMapping(value = {"${portalPath}/solution1"})
+    @RequestMapping(value = {"solution1"})
 
     public String solution1(HttpServletRequest request,HttpServletResponse response, Model model) {
 
         return "modules/pages/solution1";
     }
 
-    @RequestMapping(value = {"${portalPath}/solution2"})
+    @RequestMapping(value = {"solution2"})
 
     public String solution2(HttpServletRequest request,HttpServletResponse response, Model model) {
 
@@ -58,7 +58,7 @@ public class IndexController extends BaseController {
     }
 
 
-    @RequestMapping(value = {"${portalPath}/solution3"})
+    @RequestMapping(value = {"solution3"})
 
     public String solution3(HttpServletRequest request,HttpServletResponse response, Model model) {
 
@@ -66,14 +66,14 @@ public class IndexController extends BaseController {
     }
 
 
-    @RequestMapping(value = {"${portalPath}/solution4"})
+    @RequestMapping(value = {"solution4"})
 
     public String solution4(HttpServletRequest request,HttpServletResponse response, Model model) {
 
         return "modules/pages/solution4";
     }
 
-    @RequestMapping(value = {"${portalPath}/news"})
+    @RequestMapping(value = {"news"})
 
     public String news(HttpServletRequest request,HttpServletResponse response, Model model) {
 
@@ -81,7 +81,7 @@ public class IndexController extends BaseController {
     }
 
 
-    @RequestMapping(value = {"${portalPath}/newscontent"})
+    @RequestMapping(value = {"newscontent"})
 
     public String newscontent(HttpServletRequest request,HttpServletResponse response, Model model) {
 

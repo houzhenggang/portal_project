@@ -30,7 +30,7 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="${portalPath}/company">首页 <span class="sr-only">(current)</span></a></li>
+                <li><a href="${index}">首页 <span class="sr-only">(current)</span></a></li>
                 <li class="dropdown ">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">解决方案</a>
@@ -45,7 +45,7 @@
                         <li>
                             <ul>
                                 <li>
-                                    <a href="${portalPath}/solution">
+                                    <a href="solution">
                                         <h5>大数据平台</h5>
                                         <p>金融大数据解决方案</p>
                                     </a>
@@ -55,7 +55,7 @@
                         <li>
                             <ul>
                                 <li>
-                                    <a href="${portalPath}/solution1">
+                                    <a href="solution1">
                                         <h5>EDW企业数据仓库</h5>
                                         <p>数据仓库解决方案</p>
                                     </a>
@@ -65,7 +65,7 @@
                         <li>
                             <ul>
                                 <li>
-                                    <a href="${portalPath}/solution2">
+                                    <a href="solution2">
                                         <h5>舆情平台</h5>
                                         <p>舆情分析解决方案</p>
                                     </a>
@@ -75,7 +75,7 @@
                         <li>
                             <ul>
                                 <li>
-                                    <a href="${portalPath}/solution3">
+                                    <a href="solution3">
                                         <h5>数据可视化</h5>
                                         <p>数据可视化解决方案</p>
                                     </a>
@@ -85,7 +85,7 @@
                         <li>
                             <ul>
                                 <li>
-                                    <a href="${portalPath}/solution4">
+                                    <a href="solution4">
                                         <h5>人脸识别</h5>
                                         <p>人脸闸机解决方案</p>
                                     </a>
@@ -106,8 +106,8 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="${portalPath}/news">公司新闻</a></li>
-                <li><a href="${portalPath}/about">关于我们</a></li>
+                <li><a href="news">公司新闻</a></li>
+                <li><a href="about">关于我们</a></li>
             </ul>
             <ul class="nav navbar-nav pull-right">
                 <!-- <li class="user"><a href="#"><span class="glyphicon glyphicon-envelope"></span>

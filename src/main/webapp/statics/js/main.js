@@ -15,7 +15,7 @@ $(function () {
 
     //加载主导航
     function loadMainNav() {
-        $("body:not(#index)>nav:not(.subNav)").load("/portal/company #mainNav>*", function () {
+        $("body:not(#index)>nav:not(.subNav)").load("/ #mainNav>*", function () {
             $(this).find("a").attr("href", function () {
                 return "../" + $(this).attr("href");
             });
@@ -30,7 +30,7 @@ $(function () {
 
     //加载页脚
     function loadFooter() {
-        $("body:not(#index)>footer").load("/portal/company #mainFooter>*", function () {
+        $("body:not(#index)>footer").load("/ #mainFooter>*", function () {
             // console.log($(this)[0]);
             $(this).find("img").attr("src", function () {
                 return "../" + $(this).attr("src");
@@ -66,7 +66,7 @@ $(function () {
 
     //加载新闻详情页面的样式
     function loadNewsContent() {
-        $("#newsContent:not(.newsContentFirst)").find("#main").load("newscontent.jsp #main>*", function () {
+        $("#newsContent:not(.newsContentFirst)").find("#main").load("/portal/newscontent #main>*", function () {
             // console.log($("#articleTitle").text())
             $(".articleTitle").text($("#articleTitle").text());
             $(".publishedTime").text($("#publishedTime").text());

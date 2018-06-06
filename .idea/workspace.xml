@@ -8,81 +8,14 @@
   <component name="ChangeListManager">
     <list default="true" id="13a163a3-4aee-4be0-b71a-92a2e3eb48d9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/common/utils/SendMsgUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/littleproject/service/DangerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/littleproject/service/RiskEventModelService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/littleproject/service/SummaryProductService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/littleproject/service/business/BusinessInfoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/littleproject/web/DangerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/littleproject/web/DangersController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/littleproject/web/DaoRuShuJu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/littleproject/web/LittleProjectAuthenController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/littleproject/web/PersonalController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/littleproject/web/SummaryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/littleproject/web/SummaryProductController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/littleproject/web/business/BaseInfoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/littleproject/web/business/EnterpriseAtlasController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/littleproject/web/business/RiskInformationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/littleproject/web/business/SearchController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/account/dao/AccountAttentionDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/account/dao/AccountMobileCodeDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/account/entity/AccountAttention.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/account/entity/AccountMobileCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/account/service/AccountAttentionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/account/service/AccountMobileCodeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/account/web/AccountAttentionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/account/web/AccountMobileCodeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/aitext/dao/SouceDataDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/aitext/dao/SouceDataResultDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/aitext/entity/SouceData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/aitext/entity/SouceDataResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/aitext/service/SouceDataResultService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/aitext/service/SouceDataService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/aitext/web/AitextController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/aitext/web/SouceDataController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/aitext/web/SouceDataResultController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/cms/service/CmsNewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/cms/service/CmsNewsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/index/web/PortalIndexController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/integration/dao/AccountIntegrationHistoryDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/integration/entity/AccountIntegrationHistory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/integration/service/AccountIntegrationHistoryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/integration/web/AccountIntegrationHistoryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/littleproject/dao/SysReligionDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/littleproject/entity/SysReligion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/littleproject/service/SysReligionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/littleproject/web/SysReligionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/subscribe/dao/AccountSubscribeHistoryDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/subscribe/entity/AccountSubscribeHistory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/subscribe/service/AccountSubscribeHistoryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/subscribe/web/AccountSubscribeHistoryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/sys/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/sys/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/thirdplat/web/WxAuthController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/aitext/SouceDataDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/aitext/SouceDataResultDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappings/modules/integration/AccountIntegrationHistoryDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/company/web/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/company/web/IndexController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/portal.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/portal.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/littleproject/user/hubTestappInfoForm.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/littleproject/user/hubTestappInfoList.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/account/accountAttentionForm.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/account/accountAttentionList.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/account/accountMobileCodeForm.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/account/accountMobileCodeList.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/aitext/souceDataForm.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/aitext/souceDataList.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/aitext/souceDataResultForm.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/aitext/souceDataResultList.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/integration/accountIntegrationHistoryForm.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/integration/accountIntegrationHistoryList.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/QdchPortal/WEB-INF/views/littleproject/user/hubTestappInfoForm.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/QdchPortal/WEB-INF/views/littleproject/user/hubTestappInfoList.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/QdchPortal/WEB-INF/views/modules/account/accountAttentionForm.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/QdchPortal/WEB-INF/views/modules/account/accountAttentionList.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/QdchPortal/WEB-INF/views/modules/account/accountMobileCodeForm.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/QdchPortal/WEB-INF/views/modules/account/accountMobileCodeList.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/QdchPortal/WEB-INF/views/modules/aitext/souceDataForm.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/QdchPortal/WEB-INF/views/modules/aitext/souceDataList.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/QdchPortal/WEB-INF/views/modules/aitext/souceDataResultForm.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/QdchPortal/WEB-INF/views/modules/aitext/souceDataResultList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/taglib.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/taglib.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/pages/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/statics/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/statics/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/QdchPortal/WEB-INF/views/include/taglib.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/QdchPortal/WEB-INF/views/include/taglib.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/QdchPortal/WEB-INF/views/modules/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/QdchPortal/WEB-INF/views/modules/pages/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/QdchPortal/statics/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/QdchPortal/statics/js/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -98,8 +31,8 @@
       <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/company/web/IndexController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="67" selection-start-line="67" selection-end-line="67" />
+            <state relative-caret-position="197">
+              <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,46 +40,74 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/pages/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="59" column="55" lean-forward="true" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HubTestappInfoDao.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mappings/littleproject/user/HubTestappInfoDao.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-433">
+              <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="NewsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/company/web/NewsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+            <state relative-caret-position="140">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Page.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qdch/portal/common/persistence/Page.java">
+      <file leaf-file-name="taglib.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/taglib.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-              <folding>
-                <element signature="e#4898#4899#0" expanded="true" />
-                <element signature="e#4921#4922#0" expanded="true" />
-                <element signature="e#4965#4966#0" expanded="true" />
-                <element signature="e#4998#4999#0" expanded="true" />
-                <element signature="e#8359#8360#0" expanded="true" />
-                <element signature="e#8386#8387#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="209">
+              <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="portal.properties" pinned="false" current-in-tab="false">
+      <file leaf-file-name="portal.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/portal.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="142" column="16" selection-start-line="142" selection-start-column="16" selection-end-line="142" selection-end-column="16" />
+            <state relative-caret-position="254">
+              <caret line="28" column="87" lean-forward="true" selection-start-line="28" selection-start-column="87" selection-end-line="28" selection-end-column="87" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cmsNewsForm.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/cms/cmsNewsForm.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="55" column="93" selection-start-line="55" selection-start-column="93" selection-end-line="55" selection-end-column="93" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/statics/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1261">
+              <caret line="68" column="88" selection-start-line="68" selection-start-column="88" selection-end-line="68" selection-end-column="88" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/sys/entity/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+            <state relative-caret-position="156">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -160,39 +121,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="news.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/pages/news.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="75" column="104" selection-start-line="75" selection-start-column="104" selection-end-line="75" selection-end-column="104" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CmsNewsDao.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mappings/modules/cms/CmsNewsDao.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="493" column="9" selection-start-line="493" selection-start-column="9" selection-end-line="493" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="newscontent.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/pages/newscontent.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="75" selection-start-line="75" selection-end-line="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&lt;mvc</find>
-      <find>${ctxStatics}i</find>
       <find>sol</find>
       <find>zhong</find>
       <find>Zhong</find>
@@ -219,11 +151,15 @@
       <find>/img/</find>
       <find>../</find>
       <find>total</find>
+      <find>/company</find>
+      <find>${portalPath}</find>
       <find>pageSize</find>
+      <find>${portalPath}/</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>${ctxStatics}/</replace>
+      <replace>${ctxportal}</replace>
       <replace>/images/</replace>
     </replaceStrings>
     <dirStrings>
@@ -244,7 +180,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/web/IndexController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/aitext/web/SouceDataController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/taglib.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/statics/css/index.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/statics/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/pages/about.jsp" />
@@ -257,20 +192,21 @@
         <option value="$PROJECT_DIR$/src/main/webapp/statics/css/news.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/statics/css/newsContent.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/statics/css/about.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/statics/js/main.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/company/web/IndexController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/cms/dao/CmsNewsDao.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/pages/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/qdch/portal/common/persistence/Page.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/pages/news.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/mappings/modules/cms/CmsNewsDao.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/pages/newscontent.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/company/web/NewsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/cms/service/CmsNewsService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/portal.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/qdch/portal/littleproject/web/SummaryProductController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/sys/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qdch/portal/common/utils/SendMsgUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/statics/js/main.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/taglib.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/company/web/IndexController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/pages/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/portal.properties" />
       </list>
     </option>
   </component>
@@ -286,6 +222,28 @@
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="QdchPortal" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="QdchPortal" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="QdchPortal" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="war" type="36feed69:MavenProjectsStructure$PluginNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
@@ -728,12 +686,12 @@
       <option name="presentableId" value="Default" />
       <updated>1528108723559</updated>
       <workItem from="1528108727633" duration="7964000" />
-      <workItem from="1528167639394" duration="7336000" />
+      <workItem from="1528167639394" duration="13272000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15300000" />
+    <option name="totallyTimeSpent" value="21236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -742,7 +700,7 @@
       <window_info anchor="right" id="Palette" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Application Servers" order="0" />
-      <window_info anchor="right" id="Maven Projects" order="0" />
+      <window_info anchor="right" id="Maven Projects" order="0" weight="0.3297568" />
       <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="0" />
@@ -750,7 +708,7 @@
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="11" visible="true" weight="0.43" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.43" />
       <window_info anchor="bottom" id="TODO" order="14" />
       <window_info anchor="bottom" id="Messages" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
@@ -761,7 +719,7 @@
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.73142856" />
       <window_info anchor="bottom" id="Spring" order="1" />
       <window_info anchor="bottom" id="Terminal" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.24034335" />
+      <window_info content_ui="combo" id="Project" order="5" weight="0.24034335" />
       <window_info anchor="right" id="Bean Validation" order="5" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="8" />
@@ -796,7 +754,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.73142856" />
-      <window_info anchor="right" id="Maven Projects" order="0" />
+      <window_info anchor="right" id="Maven Projects" order="0" weight="0.3297568" />
       <window_info anchor="bottom" id="Find" order="8" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
       <window_info anchor="right" id="Database" order="2" />
@@ -847,34 +805,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/taglib.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/statics/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1520">
-          <caret line="80" column="86" selection-start-line="80" selection-start-column="86" selection-end-line="80" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/item/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/aitext/service/SouceDataService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/portal/index/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
@@ -893,13 +823,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/cms/cmsNewsForm.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="32" column="69" selection-start-line="32" selection-start-column="63" selection-end-line="32" selection-end-column="69" />
         </state>
       </provider>
     </entry>
@@ -1025,20 +948,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/taglib.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="53" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/statics/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1520">
-          <caret line="80" column="86" selection-start-line="80" selection-start-column="86" selection-end-line="80" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/pages/solution2.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
@@ -1060,13 +969,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
           <caret line="59" column="50" lean-forward="true" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/pages/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="108" column="62" lean-forward="true" selection-start-line="108" selection-start-column="62" selection-end-line="108" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -1115,16 +1017,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/company/web/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qdch/portal/common/persistence/Page.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1151,20 +1043,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/portal.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="142" column="16" selection-start-line="142" selection-start-column="16" selection-end-line="142" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/company/web/NewsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -1198,10 +1076,78 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/mappings/modules/aitext/SouceDataDao.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappings/modules/subscribe/AccountSubscribeHistoryDao.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappings/modules/thirdplat/AccountThirdplatDao.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappings/modules/account/AccountAttentionDao.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/sys/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+        <state relative-caret-position="156">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/statics/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1261">
+          <caret line="68" column="88" selection-start-line="68" selection-start-column="88" selection-end-line="68" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/pages/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="59" column="55" lean-forward="true" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappings/littleproject/user/HubTestappInfoDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-433">
+          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/modules/cms/cmsNewsForm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="55" column="93" selection-start-line="55" selection-start-column="93" selection-end-line="55" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/company/web/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdch/portal/modules/company/web/NewsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/taglib.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/portal.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="28" column="87" lean-forward="true" selection-start-line="28" selection-start-column="87" selection-end-line="28" selection-end-column="87" />
         </state>
       </provider>
     </entry>

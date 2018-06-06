@@ -9,6 +9,8 @@
 <%@ taglib prefix="act" tagdir="/WEB-INF/tags/act" %>
 <%@ taglib prefix="cms" tagdir="/WEB-INF/tags/cms" %>
 <c:set var="ctx" value="${pageContext.request.contextPath}${fns:getAdminPath()}"/>
+<c:set var="index" value="${pageContext.request.contextPath}"/>
+<c:set var="ctxportal" value="${pageContext.request.contextPath}${fns:getPortalPath()}"/>
 <c:set var="ctxStatic" value="${pageContext.request.contextPath}/static"/>
 <c:set var="ctxStatics" value="${pageContext.request.contextPath}/statics"/>
 <c:set var="portalPath" value="${fns:getPortalPath()}"/>
